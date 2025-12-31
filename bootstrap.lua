@@ -5,7 +5,8 @@ table.insert(programs, {"pure_daisy", "https://raw.githubusercontent.com/Expedit
 print("initiating bootloader version " .. version .. ": " .. #programs .. " available.")
 
 for i = 1, #programs do
-	print(i .. ": " .. programs[1[1]])
+	print(i .. ": " .. programs[i][1])
+end
 
 if arg[1] ~= nil and arg[1] <= #programs then
 	local file = fs.open("/rom/startup.lua", "w")
@@ -13,6 +14,7 @@ if arg[1] ~= nil and arg[1] <= #programs then
 	fs.write(request.readAll())
 	request.close()
 	fs.close()
+end
 
 
 

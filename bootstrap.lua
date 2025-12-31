@@ -7,7 +7,7 @@ print("initiating bootloader version " .. version .. ": " .. #programs .. " avai
 for i = 1, #programs do
 	print(i .. ": " .. programs[i][1])
 end
-
+local arg = { ... } --varargs conversion b/c computercraft
 if arg ~= nil and tonumber(arg[1]) <= #programs then
 	print("creating script " .. programs[arg[1]][1])
 	local file = fs.open(programs[arg[1]][1], "w")

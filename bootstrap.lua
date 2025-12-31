@@ -10,11 +10,13 @@ for i = 1, #programs do
 end
 
 if arg ~= nil and tonumber(arg[1]) <= #programs then
-	local file = fs.open("/rom/startup.lua", "w")
+	print("creating script " .. programs[arg[1]][1])
+	local file = fs.open(programs[arg[1]][1], "w")
 	local request = http.get(programs[args[1]][2])
 	fs.write(request.readAll())
 	request.close()
 	fs.close()
+	print("script created")
 end
 
 

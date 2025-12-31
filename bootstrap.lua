@@ -5,6 +5,7 @@ table.insert(programs, {"pure_daisy", "https://raw.githubusercontent.com/Expedit
 print("initiating bootloader version " .. version .. ": " .. #programs .. " available.")
 
 for i = 1, #programs do
+	print(i)
 	print(i .. ": " .. programs[i][1])
 end
 

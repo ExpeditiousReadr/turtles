@@ -9,7 +9,7 @@ for i = 1, #programs do
 	print(i .. ": " .. programs[i][1])
 end
 
-if arg[1] ~= nil and tonumber(arg[1]) <= #programs then
+if arg ~= nil and tonumber(arg[1]) <= #programs then
 	local file = fs.open("/rom/startup.lua", "w")
 	local request = http.get(programs[args[1]][2])
 	fs.write(request.readAll())
